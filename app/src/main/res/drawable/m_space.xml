@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  I am the original author of this icon and of this vector file.
+  The icon consists of a capitalized M combined with the symbol for space.
+  I invented it to represent the meaning of "monospaced text" and use it to represent an action or state. It is not used for identity, but for meaning.
+  The symbol is not copyrighted, as it consists of only common and simple symbols.
+  This file is copyrighted, as the vector path is manually written.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="80"
+    android:viewportHeight="80">
+    <path android:pathData="M 20,55 L 20,65 L 60,65 L 60,55 M 60,45 L 60,15 L 40,39 L 20,15 L 20,45"
+        android:strokeWidth="7"
+        android:strokeColor="#FFFFFF"/>
+</vector>
