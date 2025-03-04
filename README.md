@@ -12,7 +12,7 @@ It also comes with an indentation tool, which can insert any number of spaces/ta
 
 ### What this app can do
 
-* Show some of the control characters and delete or replace them (e.g., replace a tab with spaces)
+* Show some of the control characters and delete or replace them (e.g., replace tabs with spaces)
 
 * Add or remove any number of spaces to or from the start of each selected line.
 
@@ -45,3 +45,5 @@ It also comes with an indentation tool, which can insert any number of spaces/ta
 * This is under development. It has bugs.
 
 * When you replace a character using this app, only the character or characters grouped together (represented as `CHAR (NUMBER)`, where `CHAR` is the character and `NUMBER` is the number of characters of that kind) will be replaced. The functionality of replacing it in the whole file is not implemented.
+
+* The functionality of opening a file is not yet implemented. Just copy and paste the file content if you want to analyze it.
