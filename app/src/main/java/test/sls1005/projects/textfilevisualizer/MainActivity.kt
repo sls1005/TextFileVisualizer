@@ -374,9 +374,6 @@ class MainActivity : ComponentActivity() {
                                         if (i1 > 0) {
                                             for (i in (i1 - 1) downTo 0) {
                                                 val c = text[i]
-                                                if (c == indentationChar && (newCursorOffset + indentationCharNum > 0)/*&& indentationChar != '\n'*/) {
-                                                    newCursorOffset -= 1
-                                                }
                                                 if (c == '\n') {
                                                     startIndex = i + 1
                                                     break
@@ -407,13 +404,15 @@ class MainActivity : ComponentActivity() {
                                                             append(c)
                                                         } else if (c == charForIndentation && state == 1) {
                                                             if (counter < indentationCharNum) {
+                                                                newCursorOffset -= 1
                                                                 counter += 1
                                                             } else {
                                                                 state = 2
                                                                 counter = 0
                                                                 append(c)
                                                             }
-                                                        } else{
+                                                        } else{ // c != '\n' && (c != charForIndentation || state != 1)
+                                                            state = 2
                                                             append(c)
                                                         }
                                                     }
