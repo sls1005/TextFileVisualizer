@@ -401,6 +401,7 @@ class MainActivity : ComponentActivity() {
                                                         val c = text[i]
                                                         if (c == '\n') {
                                                             state = 1
+                                                            counter = 0
                                                             append(c)
                                                         } else if (c == charForIndentation && state == 1) {
                                                             if (counter < indentationCharNum) {
@@ -408,11 +409,14 @@ class MainActivity : ComponentActivity() {
                                                                 counter += 1
                                                             } else {
                                                                 state = 2
-                                                                counter = 0
                                                                 append(c)
                                                             }
-                                                        } else{ // c != '\n' && (c != charForIndentation || state != 1)
-                                                            state = 2
+                                                        } else { // c != '\n' && (c != charForIndentation || state != 1)
+                                                            if (c.code == CharType.ZWNBSP.code && i == 0) { // BOM
+                                                                state = 1
+                                                            } else {
+                                                                state = 2
+                                                            }
                                                             append(c)
                                                         }
                                                     }
