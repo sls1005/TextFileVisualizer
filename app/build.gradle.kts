@@ -12,8 +12,8 @@ android {
         applicationId = "test.sls1005.projects.textfilevisualizer"
         minSdk = 21
         targetSdk = 35
-        versionCode = 5
-        versionName = "1.3.1"
+        versionCode = 6
+        versionName = "1.4.0"
     }
     signingConfigs {
         register("release") {
@@ -73,7 +73,7 @@ tasks.register<Copy>("Include license") {
     val task = it.get()
     afterEvaluate {
         tasks.named("preReleaseBuild") {
-            dependsOn(it)
+            dependsOn(task)
         }
     }
 }

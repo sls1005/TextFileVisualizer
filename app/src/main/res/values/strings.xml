@@ -2,5 +2,5 @@
     <string name="app_name">Text File Visualizer</string>
     <string name="selected_colon">"Selected: "</string>
     <string name="total_colon">"Total: "</string>
-    <string name="summary_template">"  %1$d Unicode character(s) (measured in UTF-32)\n\n  %2$d byte(s) (measured in UTF-8)\n"</string>
+    <string name="summary_template">"  %1$d word(s)\n\n  %2$d Unicode character(s)\n\n  %3$d byte(s) (measured in UTF-8)\n"</string>
 </resources>
