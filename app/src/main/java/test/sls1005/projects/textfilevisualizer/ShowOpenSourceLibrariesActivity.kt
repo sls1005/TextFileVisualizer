@@ -13,7 +13,9 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
+import com.mikepenz.aboutlibraries.Libs
 import com.mikepenz.aboutlibraries.ui.compose.m3.LibrariesContainer
+import com.mikepenz.aboutlibraries.util.withContext
 import test.sls1005.projects.textfilevisualizer.ui.theme.TextFileVisualizerTheme
 
 class ShowOpenSourceLibrariesActivity : ComponentActivity() {
@@ -36,9 +38,10 @@ class ShowOpenSourceLibrariesActivity : ComponentActivity() {
                     Column(
                         modifier = Modifier.padding(innerPadding)
                     ) {
-                        LibrariesContainer {
-                            Modifier.fillMaxSize()
-                        }
+                        LibrariesContainer(
+                            Libs.Builder().withContext(this@ShowOpenSourceLibrariesActivity).build(),
+                            modifier = Modifier.fillMaxSize()
+                        )
                     }
                 }
             }
